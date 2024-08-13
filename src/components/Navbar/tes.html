@@ -1,0 +1,195 @@
+<nav class="bg-gray-800">
+    <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+      <div class="relative flex h-16 items-center justify-between">
+        <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+          <!-- Mobile menu button-->
+          <button type="button" class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="absolute -inset-0.5"></span>
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+            <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+          <div class="flex flex-shrink-0 items-center">
+            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500" alt="Your Company">
+          </div>
+          <div class="hidden sm:ml-6 sm:block">
+            <div class="flex space-x-4">
+              <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+              <a href="#" class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white" aria-current="page">Dashboard</a>
+              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+              <a href="#" class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+            </div>
+          </div>
+        </div>
+        <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+          <button type="button" class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+            <span class="absolute -inset-1.5"></span>
+            <span class="sr-only">View notifications</span>
+            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+            </svg>
+          </button>
+  
+          <!-- Profile dropdown -->
+          <div class="relative ml-3">
+            <div>
+              <button type="button" class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800" id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                <span class="absolute -inset-1.5"></span>
+                <span class="sr-only">Open user menu</span>
+                <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+              </button>
+            </div>
+  
+            <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+            <div class="absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-white py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none" role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+              <!-- Active: "bg-gray-100", Not Active: "" -->
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-0">Your Profile</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-1">Settings</a>
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="user-menu-item-2">Sign out</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Mobile menu, show/hide based on menu state. -->
+    <div class="sm:hidden" id="mobile-menu">
+      <div class="space-y-1 px-2 pb-3 pt-2">
+        <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+        <a href="#" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white" aria-current="page">Dashboard</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Team</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Projects</a>
+        <a href="#" class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Calendar</a>
+      </div>
+    </div>
+  </nav>
+
+<nav class="xl:pl-60 sticky left-0 top-0 z-50 w-full bg-white shadow dark:bg-neutral-800">
+    <div class="px-3" bis_skin_checked="1">
+        <div class="relative flex h-[58px] items-center justify-between" bis_skin_checked="1">
+            <div class="flex flex-1 items-center sm:items-stretch sm:justify-start" bis_skin_checked="1">
+                <div class="flex flex-shrink-0 items-center" bis_skin_checked="1">
+                    <div id="hamburger" class="xl:hidden
+                    mr-4 flex text-neutral-400" data-te-sidenav-toggle-ref="" data-te-target="#sidenav-main" bis_skin_checked="1" aria-expanded="true">
+                        <a href="#" class="text-neutral-400"><svg fill="hsl(224, 7.2%, 40%)" viewBox="0 0 100 80" width="20" height="20"><rect width="80" height="14"></rect><rect y="30" width="80" height="14"></rect><rect y="60" width="80" height="14"></rect></svg>
+                        </a>
+                    </div>
+                </div>
+                <div id="te-search-container" class="relative hidden lg:flex lg:items-center" bis_skin_checked="1">
+                    <form class="relative mb-0 flex flex-wrap items-stretch">
+                        <style>#te-search-input:focus-within{box-shadow:inset 0 0 0 1px #3b71ca}</style>
+                        <input id="te-search-input" autocomplete="off" type="search" class="focus:shadow-te-blue relative m-0 inline-block w-[1%] min-w-[225px] flex-auto rounded border border-solid border-neutral-300 bg-transparent bg-clip-padding px-3 py-1 text-base font-normal text-gray-700 outline-none transition duration-300 ease-in-out focus:border-blue-600 focus:text-gray-700 dark:border-neutral-600 dark:text-gray-200 dark:placeholder:text-gray-200" placeholder="Search (ctrl + &quot;/&quot; to focus)">
+                        <span class="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-700 dark:text-gray-200">
+                        <span class="text-neutral-400" id="te-search-icon"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentcolor" class="h-5 w-5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5.0 105.196 5.196a7.5 7.5.0 0010.607 10.607z"></path></svg>
+                        </span>
+                        </span>
+                    </form>
+                    <div id="te-search-dropdown" class="lpy-2 absolute top-[36px] z-[999999] hidden w-full overflow-hidden rounded bg-white shadow-md dark:bg-neutral-700" bis_skin_checked="1">
+                        <ul id="te-search-list" class="relative max-h-[265px] w-full overflow-y-scroll pt-0 [&amp;::-webkit-scrollbar]:hidden ps"><div class="ps__rail-x" bis_skin_checked="1" style="left: 0px; bottom: 0px;"><div class="ps__thumb-x" tabindex="0" bis_skin_checked="1" style="left: 0px; width: 0px;"></div></div><div class="ps__rail-y" bis_skin_checked="1" style="top: 0px; right: 0px;"><div class="ps__thumb-y" tabindex="0" bis_skin_checked="1" style="top: 0px; height: 0px;"></div></div></ul>
+                        <hr class="my-0 dark:border-neutral-600">
+                        <p class="my-4 mr-4 text-end text-xs text-neutral-600 dark:text-neutral-100">
+                        search results: <strong id="te-search-count"></strong>
+                        </p>
+                    </div>
+                </div>
+                    <div class="ml-auto hidden items-center sm:flex" bis_skin_checked="1">
+                        <div class="flex" bis_skin_checked="1">
+                        <div class="relative" data-te-dropdown-ref="" bis_skin_checked="1">
+                        <button class="items-center hidden py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:flex sm:px-3 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-zinc-400" type="button" id="dropdownMenuButton1" data-te-dropdown-toggle-ref="" aria-expanded="false">
+                        Docs
+                        <span class="w-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentcolor" class="h-5 w-5"><path fill-rule="evenodd" d="M5.23 7.21a.75.75.0 011.06.02L10 11.168l3.71-3.938a.75.75.0 111.08 1.04l-4.25 4.5a.75.75.0 01-1.08.0l-4.25-4.5a.75.75.0 01.02-1.06z" clip-rule="evenodd"></path></svg>
+                        </span>
+                        </button>
+                        <ul class="absolute z-[1000] float-left m-0 hidden min-w-[180px] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-700 [&amp;[data-te-dropdown-show]]:block" aria-labelledby="dropdownMenuButton1" data-te-dropdown-menu-ref="">
+                        <li>
+                        <a class="flex w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600" href="/" data-te-dropdown-item-ref="">
+                        <img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/_assets/img/icons/javascript.webp" alt="" class="w-4 h-4 mr-2">
+                        Standard</a>
+                        </li>
+                        <li>
+                        <a class="flex w-full whitespace-nowrap bg-transparent px-4 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-neutral-600" href="/docs/react" data-te-dropdown-item-ref="">
+                        <img src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/content/en/_mdb5/_assets/img/icons/react.webp" alt="" class="w-4 h-4 mr-2">
+                        React</a>
+                        </li>
+                        </ul>
+                        </div>
+                        <a target="_blank" href="/pro/" class="hidden py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 lg:block lg:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-zinc-400">Pricing</a>
+                        <a href="/learn/te-foundations/basics/introduction/" class="hidden py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:block sm:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-zinc-400">Learn</a>
+                        <a href="https://github.com/mdbootstrap/TW-Elements-React/discussions" class="hidden py-2 text-neutral-500 hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:block sm:px-2 [&amp;.active]:text-black/90 dark:[&amp;.active]:text-zinc-400">Community</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-y-0 right-0 flex items-center pr-0 sm:static sm:inset-auto sm:ml-4" bis_skin_checked="1">
+                    <div id="theme-switcher" class="w-8" bis_skin_checked="1">
+                        <button class="rounded-2 flex items-center justify-center whitespace-nowrap px-1.5 py-2 uppercase text-neutral-500 transition duration-150 ease-in-out hover:text-neutral-700 focus:text-neutral-700 disabled:text-black/30 motion-reduce:transition-none dark:text-neutral-200 dark:hover:text-neutral-300 dark:focus:text-neutral-300 sm:p-2" type="button" id="themeSwitcher" data-te-dropdown-toggle-ref="" data-te-dropdown-position="dropend" aria-expanded="false"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor" class="inline-block h-4 w-4"><path fill-rule="evenodd" d="M9.528 1.718a.75.75.0 01.162.819A8.97 8.97.0 009 6a9 9 0 009 9 8.97 8.97.0 003.463-.69.75.75.0 01.981.98 10.503 10.503.0 01-9.694 6.46c-5.799.0-10.5-4.701-10.5-10.5.0-4.368 2.667-8.112 6.46-9.694a.75.75.0 01.818.162z" clip-rule="evenodd"></path></svg>
+                        </button>
+                        <ul class="absolute z-[1000] float-left m-0 hidden w-[120px] list-none overflow-hidden rounded-lg border-none bg-white bg-clip-padding text-left text-base shadow-lg dark:bg-neutral-800 [&amp;[data-te-dropdown-show]]:block" aria-labelledby="themeSwitcher" data-te-dropdown-menu-ref="">
+                        <li class="text flex scale-[0.8] items-center justify-center py-1 font-bold text-gray-400"><svg class="-ml-1 fill-gray-400" xmlns="http://www.w3.org/2000/svg" height="20" width="20"><path d="M7 17v-5.792H3L10 2l7 9.208h-4V17zm1.5-1.5h3V9.708h2.438L10 4.438l-3.938 5.27H8.5zM10 9.708z"></path></svg>
+                        <span class="ml-1 mr-2">+</span>
+                        <span>D</span>
+                        </li>
+                        <li></li>
+                        <li>
+                        <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600" href="#" data-theme="light" data-te-dropdown-item-ref="">
+                        <div class="pointer-events-none" bis_skin_checked="1">
+                            <div class="inline-block w-[24px] text-center align-middle" data-theme-icon="light" bis_skin_checked="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor" class="inline-block h-5 w-5"><path d="M12 2.25a.75.75.0 01.75.75v2.25a.75.75.0 01-1.5.0V3a.75.75.0 01.75-.75zM7.5 12a4.5 4.5.0 119 0 4.5 4.5.0 01-9 0zM18.894 6.166a.75.75.0 00-1.06-1.06l-1.591 1.59a.75.75.0 101.06 1.061l1.591-1.59zM21.75 12a.75.75.0 01-.75.75h-2.25a.75.75.0 010-1.5H21a.75.75.0 01.75.75zm-3.916 6.894a.75.75.0 001.06-1.06l-1.59-1.591a.75.75.0 10-1.061 1.06l1.59 1.591zM12 18a.75.75.0 01.75.75V21a.75.75.0 01-1.5.0v-2.25A.75.75.0 0112 18zM7.758 17.303a.75.75.0 00-1.061-1.06l-1.591 1.59a.75.75.0 001.06 1.061l1.591-1.59zM6 12a.75.75.0 01-.75.75H3a.75.75.0 010-1.5h2.25A.75.75.0 016 12zm.697-4.243a.75.75.0 001.06-1.06l-1.59-1.591a.75.75.0 00-1.061 1.06l1.59 1.591z"></path></svg>
+                            </div>
+                            <span data-theme-name="light">Light</span>
+                        </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600" href="#" data-theme="dark" data-te-dropdown-item-ref="">
+                    <div class="pointer-events-none" bis_skin_checked="1">
+                    <div class="-mt-1 inline-block w-[24px] text-center align-middle" data-theme-icon="dark" bis_skin_checked="1"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentcolor" class="inline-block h-4 w-4"><path fill-rule="evenodd" d="M9.528 1.718a.75.75.0 01.162.819A8.97 8.97.0 009 6a9 9 0 009 9 8.97 8.97.0 003.463-.69.75.75.0 01.981.98 10.503 10.503.0 01-9.694 6.46c-5.799.0-10.5-4.701-10.5-10.5.0-4.368 2.667-8.112 6.46-9.694a.75.75.0 01.818.162z" clip-rule="evenodd"></path></svg>
+                    </div>
+                    <span data-theme-name="dark">Dark</span>
+                    </div>
+                    </a>
+                    </li>
+                    <li>
+                    <a class="block w-full whitespace-nowrap bg-transparent px-3 py-2 text-sm font-normal text-neutral-700 hover:bg-neutral-100 focus:bg-neutral-200 focus:outline-none active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-100 dark:hover:bg-neutral-600 focus:dark:bg-neutral-600" href="#" data-theme="system" data-te-dropdown-item-ref="">
+                    <div class="pointer-events-none" bis_skin_checked="1">
+                    <div class="inline-block w-[24px] text-center text-primary-500" data-theme-icon="system" bis_skin_checked="1"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="inline-block w-4" role="img" viewBox="0 0 640 512"><path fill="currentcolor" d="M128 32C92.7 32 64 60.7 64 96V352h64V96H512V352h64V96c0-35.3-28.7-64-64-64H128zM19.2 384C8.6 384 0 392.6.0 403.2.0 445.6 34.4 480 76.8 480H563.2c42.4.0 76.8-34.4 76.8-76.8.0-10.6-8.6-19.2-19.2-19.2H19.2z"></path></svg>
+                    </div>
+                    <span data-theme-name="system" class="text-primary-500">System</span>
+                    </div>
+                    </a>
+                    </li>
+                    </ul>
+                    </div>
+                <a href="https://twitter.com/TailwindElement/" target="_blank" class="rounded-md px-1.5 py-2 text-sm font-medium text-black/60 transition duration-200 hover:text-black/80 hover:ease-in-out focus:text-black/80 active:text-black/80 motion-reduce:transition-none dark:text-white/60 dark:hover:text-white/80 dark:focus:text-white/80 dark:active:text-white/80 sm:p-2">
+                <span class="[&amp;>svg]:h-4 [&amp;>svg]:w-4"><svg xmlns="http://www.w3.org/2000/svg" fill="currentcolor" viewBox="0 0 512 512"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"></path></svg>
+                </span>
+                </a>
+                <span id="dpl-navbar-new-right-buttons" class="flex"></span>
+                </div>
+        </div>
+    </div>
+</nav>
